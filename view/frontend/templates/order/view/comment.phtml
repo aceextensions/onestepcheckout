@@ -1,0 +1,36 @@
+<?php
+/**
+ * Aceextensions_OneStepCheckout
+ *
+ * @category    Checkout
+ * @package     Aceextensions_OneStepCheckout
+ * @author      Durga Shankar Gupta
+ * @copyright   DreamWorkFactory (https://dreamworkfactory.com/)
+ * @license     http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
+ */
+?>
+<?php
+/**
+ * @var $block \Aceextensions\OneStepCheckout\Block\LayoutOnestepCheckout\Order\View\Comment
+ */
+?>
+<?php if ($orderDate = $block->getOrderDateTime()): ?>
+    <div class="box box-order-date">
+        <strong class="box-title">
+            <span><?php echo __('Delivery Date') ?></span>
+        </strong>
+        <div class="box-content">
+            <?php echo $orderDate; ?>
+        </div>
+    </div>
+<?php endif; ?>
+<?php if ($commentHtml = $block->getOrderComment()): ?>
+    <div class="box box-order-comment">
+        <strong class="box-title">
+            <span><?php echo __('Delivery Comment') ?></span>
+        </strong>
+        <div class="box-content">
+            <?php echo $commentHtml; ?>
+        </div>
+    </div>
+<?php endif; ?>

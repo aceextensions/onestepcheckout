@@ -1,0 +1,23 @@
+<?php
+/**
+ * Aceextensions_OneStepCheckout
+ *
+ * @category    Checkout
+ * @package     Aceextensions_OneStepCheckout
+ * @author      Durga Shankar Gupta
+ * @copyright   DreamWorkFactory (https://dreamworkfactory.com/)
+ * @license     http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
+ * @var $block \Magento\Backend\Block\Dashboard\Grids\Interceptor
+ * @var Magento\Backend\Block\Template $block 
+ * */
+?>
+<?php if ($html = $block->getChildHtml()): ?>
+    <section class="admin__page-section order-onestepcheckout-additional">
+        <div class="admin__page-section-title">
+            <strong class="title"><?php echo __('Additional Content') ?></strong>
+        </div>
+        <div class="admin__page-section-content">
+            <?php echo $html ?>
+        </div>
+    </section>
+<?php endif ?>

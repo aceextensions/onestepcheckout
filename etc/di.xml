@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <preference for="Aceextensions\OneStepCheckout\Api\CheckoutManagementInterface" type="Aceextensions\OneStepCheckout\Model\CheckoutManagement"/>
+    <preference for="Aceextensions\OneStepCheckout\Api\GuestCheckoutManagementInterface" type="Aceextensions\OneStepCheckout\Model\GuestCheckoutManagement"/>
+    <preference for="Magento\Checkout\Controller\Index\Index" type="Aceextensions\OneStepCheckout\Controller\Checkout\Index" />
+    <type name="Magento\Customer\Model\Address">
+        <plugin name="setShouldIgnoreValidation" type="Aceextensions\OneStepCheckout\Plugin\Customer\Address"/>
+    </type>
+    <type name="Magento\Customer\Model\AccountManagement">
+        <plugin name="onestepcheckout_newaccount" type="Aceextensions\OneStepCheckout\Plugin\Customer\AccountManagement"/>
+    </type>
+</config>
