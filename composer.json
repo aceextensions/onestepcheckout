@@ -5,15 +5,11 @@
     "license": "MIT",
     "authors": [
         {
-            "name": "Mage2Gen",
-            "email": "info@mage2gen.com"
-        },
-        {
             "name": "Durga Shankar Gupta",
             "email": "dsguptas@gmail.com"
         }
     ],
-    "minimum-stability": "dev",
+    "minimum-stability": "stable",
     "require": {},
     "autoload": {
         "files": [
